@@ -1,8 +1,19 @@
 # PythonImageTranslation
-Translate a black and white image into code that a sailfish simulation can run
+Captures a hand drawn image using a Jetson TX1s build in camera and inputs it into a liquid simulation.
 
-If you have sailfish installed on a jetson developer kit in the ~/sailfish-cfd directory, you can run go.sh and it will capture input and translate it into sailfish simualtion
+##Installation
 
-run cameraTest.sh to test your camera
+run 'chmod +x setup.sh'
+run sudo ./setup.sh
 
-working.py runs the sailfish simulation
+##usage
+
+cd to the image/ directory and run:
+
+'chmod +x go.sh'
+
+Then run './go.sh'
+
+An image will be captured at 90degrees to how it will be used (to fix)
+
+press any key to dismiss the image, and press space or r to continue or retake the image.

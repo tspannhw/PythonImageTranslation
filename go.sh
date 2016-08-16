@@ -26,11 +26,11 @@ do
 		read -n1 -r -p "Press r if you want to retake, otherwise press space" key
 		if [[ $key = "" ]]
 		then
-			echo -e \nSpace
+			
 			break
 		else [[ $key = "r" ]]
 
-			echo -e \n recapturing
+			
 		fi
 	done
 	python working.py --mode=visualization #--cluster_spec=clusterDefinition.py
