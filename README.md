@@ -3,16 +3,16 @@ Captures a hand drawn image using a Jetson TX1s build in camera and inputs it in
 
 ##Installation
 
-run 'chmod +x setup.sh'
+run `chmod +x setup.sh`
 run sudo ./setup.sh
 
 ##usage
 
 cd to the image/ directory and run:
 
-'chmod +x go.sh'
+`chmod +x go.sh`
 
-Then run './go.sh'
+Then run `./go.sh`
 
 An image will be captured at 90degrees to how it will be used (to fix)
 
