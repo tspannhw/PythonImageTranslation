@@ -2,7 +2,7 @@
 me=$(whoami)
 
 
-if [ me = "root" ]
+if [ $me = "root" ]
 then
 
 
