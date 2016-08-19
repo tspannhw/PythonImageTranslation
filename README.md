@@ -44,7 +44,7 @@ Then you will run `python working.py --cluster_spec=cluster.py --subdomains <num
 
 Other possible arguments include:
 
---cluster_spec=cluster.py (to set cluster definition)
+`--cluster_spec=cluster.py (to set cluster definition)
 
 --cluster_sync=$PWD (sync up cluster files so that sailfish can run on each, we recommend doing this the first time and after any change to the code)
 
@@ -54,4 +54,4 @@ Other possible arguments include:
 
 --output DIRECTORY/FILENAME (set where you want output)
 
---output_format vtk,npy,mat (we used vtk and paraview to see results)
+--output_format vtk,npy,mat (we used vtk and paraview to see results)`
