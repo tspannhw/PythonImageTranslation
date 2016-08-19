@@ -19,9 +19,10 @@ Be sure you are in home dir `cd ~`
 
 run `git clone https://lavine4@lc.llnl.gov/bitbucket/scm/pit/pythonimagetranslation.git image`
 
-#Setting up
+##Setting up
 
-run `cd ~/image'
+run `cd ~/image`
+
 run `sudo ./setup.sh`
 
 ##Usage
@@ -34,4 +35,9 @@ press any key to dismiss the image, and press space or r to continue or retake t
 ###Clustering
 
 cluster.py is an example of cluster definition file
+
 Cluster definition requires passwordless ssh to be set up between all nodes and that all required software is on each node
+
+You must set up DHCP and have each of the nodes you want to use in the cluster definition file
+
+Then you will run `python working.py --cluster_spec=cluster.py --subdomains <number of subdomains>`
