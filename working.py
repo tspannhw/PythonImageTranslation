@@ -19,8 +19,8 @@ from sailfish.lb_base import LBForcedSim
 #sim size
 rezx=256*mult
 rezy=256*mult
-print(rezx)
-print(rezy)
+#print(rezx)
+#print(rezy)
 
 
 # Load an color image in grayscale
@@ -45,9 +45,13 @@ contours,hierarchy = cv2.findContours(scrapedges,cv2.RETR_EXTERNAL,cv2.CHAIN_APP
 cv2.drawContours(edges,contours,-1,(255,255,255),-1)
 cv2.imwrite("2.jpg",edges)
 
+if len(contours) == 0 :
+	print " "
+	print "Please take a picture with higher contrast"
+	sys.exit(0) 
+#print contours[0].size
 
 cnt = contours[0]
-
 i=0
 
 for i in range(np.size(contours)) :
@@ -69,8 +73,8 @@ x=1
 ##Get size of image
 width, height = edges.shape[:2]
 
-print height
-print width
+#print height
+#print width
 
 #height=75
 #width=75
