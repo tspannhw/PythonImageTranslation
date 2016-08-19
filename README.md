@@ -41,3 +41,17 @@ Cluster definition requires passwordless ssh to be set up between all nodes and 
 You must set up DHCP and have each of the nodes you want to use in the cluster definition file
 
 Then you will run `python working.py --cluster_spec=cluster.py --subdomains <number of subdomains>`
+
+Other possible arguments include:
+
+--cluster_spec=cluster.py (to set cluster definition)
+
+--cluster_sync=$PWD (sync up cluster files so that sailfish can run on each, we recommend doing this the first time and after any change to the code)
+
+--max_iters 10000 (or whatever number you want for max iterations)
+
+--subdomains 3 (or multiple of however many nodes are being used)
+
+--output DIRECTORY/FILENAME (set where you want output)
+
+--output_format vtk,npy,mat (we used vtk and paraview to see results)
