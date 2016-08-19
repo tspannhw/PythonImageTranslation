@@ -1,5 +1,7 @@
-# PythonImageTranslation
+# About
 Captures a hand drawn image using a Jetson TX1s build in camera and inputs it into a liquid simulation.
+
+This a proof of concept project created by Xavier Quinn and Shingo Lavine to demonstrate capabilities of heterogenous computers and the clustering of them.
 
 ##Installation
 
@@ -32,11 +34,20 @@ Then run `./go.sh`
 
 press any key to dismiss the image, and press space or r to continue or retake the image.
 
-###Clustering
+##Clustering
+
+This is a more complicated proccess without a a clean output, so we do not suggest this unless you know what you are doing.
 
 cluster.py is an example of cluster definition file
 
 Cluster definition requires passwordless ssh to be set up between all nodes and that all required software is on each node
+
+To setup passwordless ssh run `ssh-keygen -t rsa`
+
+The IP of each of the compute nodes must be within `/etc/hosts`
+
+Then run `ssh-copy-id <username>@<hostname` for each of the compute nodes
+
 
 You must set up DHCP and have each of the nodes you want to use in the cluster definition file
 
@@ -55,3 +66,6 @@ Other possible arguments include:
 `--output DIRECTORY/FILENAME (set where you want output)`
 
 `--output_format vtk,npy,mat (we used vtk and paraview to see results)`
+
+
+Running on multiples nodes will split the output, which must be combined and viewed in a separate program, paraview seems to work.
