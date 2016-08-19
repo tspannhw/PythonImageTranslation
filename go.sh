@@ -1,18 +1,18 @@
-
+\
 #!/bin/bash
 
 while :
 do
 	while :
 	do
-		read -n1 -r -p "Press space to continue..." key
+		read -n 1 -p "Press space to continue..." key
 		if [[ $key = "" ]]
 		then
 			break
 		fi
 	done
 
-	echo starting
+	echo Starting
 	while :
 	do
 		#720x480
@@ -23,17 +23,20 @@ do
 		echo captured
 		echo "press any key to continue"
 		python camera.py
-		read -n1 -r -p "Press r if you want to retake, otherwise press space" key
+		read -n 1 -p "Press r to retake, space to continue, or q to quit" key
+
+		if [[ $key = "q" ]]
+		then
+			exit
+		fi
+
 		if [[ $key = "" ]]
 		then
-			
 			break
 		else [[ $key = "r" ]]
-
-			
 		fi
 	done
-	python working.py --mode=visualization #--cluster_spec=clusterDefinition.py
+	python working.py --mode=visualization --max_iters 20000
 
 	#echo opening
 	#xdg-open output.jpg
