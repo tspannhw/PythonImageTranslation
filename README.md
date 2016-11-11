@@ -19,7 +19,7 @@ run `sudo apt-get install git`
 
 Be sure you are in home dir `cd ~`
 
-run `git clone https://lavine4@lc.llnl.gov/bitbucket/scm/pit/pythonimagetranslation.git image`
+run `git clone https://github.com/shingolavine/PythonImageTranslation.git image`
 
 ##Setting up
 
@@ -33,6 +33,8 @@ Be sure you are in image dir `cd ~/image`
 Then run `./go.sh`
 
 press any key to dismiss the image, and press space or r to continue or retake the image.
+
+You can run `./tegra.sh` to get the average CPU usage (which uses \home\ubuntu\tegrastats)
 
 ##Clustering
 
